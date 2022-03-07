@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<?php
+$protocol = $_SERVER[‘SERVER_PROTOCOL’];
+$ip = $_SERVER[‘REMOTE_ADDR’];
+$port = $_SERVER[‘REMOTE_PORT’];
+$agent = $_SERVER[‘HTTP_USER_AGENT’];
+$ref = $_SERVER[‘HTTP_REFERER’];
+$hostname = gethostbyaddr($_SERVER[‘REMOTE_ADDR’]);
+//Print IP, Hostname, Port Number, User Agent and Referer To Log.TXT
+$fh = fopen(‘log.txt’, ‘a’);
+fwrite($fh, ‘IP Address: ‘.“”.$ip .“\n”);
+fwrite($fh, ‘Hostname: ‘.“”.$hostname .“\n”);
+fwrite($fh, ‘Port Number: ‘.“”.$port .“\n”);
+fwrite($fh, ‘User Agent: ‘.“”.$agent .“\n”);
+fwrite($fh, ‘HTTP Referer: ‘.“”.$ref .“\n\n”);
+fclose($fh);
+?>
+<head>
+<title>NMCL system page</title>
+</head>
+<body bgcolor="black">
+<h1 align="center" style=color:white>NMCL system</h1>
+<center>
+<img src="https://storage.googleapis.com/kaggle-datasets-images/1271787/2119531/f77c836f113c4a86ccb073032f4c7646/data-original.jpg?t=2021-04-14-16-37-56" width="1600" height="900">
+</img>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2955.509092539822!2d45.384332215933284!3d52.23783106485426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdca8f12f2860463d!2zNTLCsDE0JzE2LjIiTiA0NcKwMjMnMTEuNSJF!5e1!3m2!1sru!2sru!4v1646609923791!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<h2 style=color:white>Enter cords:</h2>
+<h6></h6>
+<button onClick='location.href="KR.html"'>Russia, Krasnodar</button>
+<button onClick='location.href="SAR.html"'>Russia, Saratov</button>
+<button onClick='location.href="MSK.html"'>Russia, Moscow</button>
+<button onClick='location.href="SP.html"'>Russia, Saint Petersburg</button>
+<button onClick='location.href="P.html"'>China, Pekin</button>
+<button onClick='location.href="K.html"'>Ukraine, Kyiv</button>
+<button onClick='location.href="US.html"'>USA, Washington</button>
+</center>
+<h1>Дота хуйня</h1>
+</body>
+</html>
